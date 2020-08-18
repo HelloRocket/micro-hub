@@ -10,3 +10,4 @@ basic.showLeds(`
     `)
 basic.showString("Hello Rocket")
 basic.showNumber(5)
+basic.showNumber(7)
