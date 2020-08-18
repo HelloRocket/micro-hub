@@ -6,4 +6,4 @@ basic.showLeds(`
     . # . . .
     `)
 basic.showString("Hello Rocket")
-basic.showNumber(7)
+basic.showNumber(5)
