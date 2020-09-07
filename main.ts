@@ -19,6 +19,11 @@ input.onButtonPressed(Button.AB, function () {
     } else {
         Win = "Tie"
     }
+    basic.showString("You")
+    basic.showString(Player_choice)
+    basic.showString("MB")
+    basic.showString(Computer_choice)
+    basic.showString(Win)
 })
 input.onButtonPressed(Button.B, function () {
     Choice += 1
