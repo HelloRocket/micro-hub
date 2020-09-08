@@ -1,33 +1,37 @@
 input.onButtonPressed(Button.A, function () {
-    Choice += -1
-    basic.showString("" + (text_list[Choice]))
+    if (Choice > 0) {
+        Choice += -1
+        basic.showString("" + (text_list[Choice]))
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     Player_choice = text_list[Choice]
-    if (Computer_choice == "Rock" && Player_choice == "Scissors") {
+    if (Computer_choice == text_list[0] && Player_choice == text_list[1]) {
         Win = "Computer Wins"
-    } else if (Computer_choice == "Scissors " && Player_choice == "Paper") {
+    } else if (Computer_choice == text_list[1] && Player_choice == text_list[2]) {
         Win = "Computer Wins"
-    } else if (Computer_choice == "Paper" && Player_choice == "Rock") {
+    } else if (Computer_choice == text_list[2] && Player_choice == text_list[0]) {
         Win = "Computer Wins"
-    } else if (Computer_choice == "Rock" && Player_choice == "Paper") {
+    } else if (Computer_choice == text_list[0] && Player_choice == text_list[2]) {
         Win = "You Win!"
-    } else if (Computer_choice == "Paper" && Player_choice == "Scissors ") {
+    } else if (Computer_choice == text_list[2] && Player_choice == text_list[1]) {
         Win = "You Win!"
-    } else if (Computer_choice == "Rock" && Player_choice == "Paper") {
+    } else if (Computer_choice == text_list[1] && Player_choice == text_list[0]) {
         Win = "You Win!"
     } else {
         Win = "Tie"
     }
     basic.showString("You")
-    basic.showString(Player_choice)
+    basic.showString("" + (Player_choice))
     basic.showString("MB")
-    basic.showString(Computer_choice)
-    basic.showString(Win)
+    basic.showString("" + (Computer_choice))
+    basic.showString("" + (Win))
 })
 input.onButtonPressed(Button.B, function () {
-    Choice += 1
-    basic.showString("" + (text_list[Choice]))
+    if (Choice < 2) {
+        Choice += 1
+        basic.showString("" + (text_list[Choice]))
+    }
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.SmallSquare)
@@ -50,4 +54,4 @@ basic.showLeds(`
     # . # . .
     . # . . .
     `)
-text_list = ["Rock", "Scissors", "Paper"]
+text_list = ["R", "S", "P"]
