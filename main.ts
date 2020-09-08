@@ -35,12 +35,15 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.SmallSquare)
+    basic.pause(100)
     basic.showIcon(IconNames.Scissors)
+    basic.pause(100)
     basic.showIcon(IconNames.Square)
+    basic.pause(100)
     basic.clearScreen()
     Choice = 0
     Computer_choice = text_list[randint(0, 2)]
-    basic.showString("" + (text_list[Choice]))
+    basic.showString("?")
 })
 let Win = ""
 let Computer_choice = ""
@@ -54,4 +57,4 @@ basic.showLeds(`
     # . # . .
     . # . . .
     `)
-text_list = ["R", "S", "P"]
+text_list = ["Rock", "Scissors", "Paper"]
