@@ -21,11 +21,13 @@ input.onButtonPressed(Button.AB, function () {
     } else {
         Win = "Tie"
     }
-    basic.showString("You")
+    basic.showString("U")
     basic.showString("" + (Player_choice))
+    basic.clearScreen()
     basic.showString("MB")
     basic.showString("" + (Computer_choice))
-    basic.showString("" + (Win))
+    basic.clearScreen()
+    basic.showString(Win)
 })
 input.onButtonPressed(Button.B, function () {
     if (Choice < 2) {
@@ -57,4 +59,4 @@ basic.showLeds(`
     # . # . .
     . # . . .
     `)
-text_list = ["Rock", "Scissors", "Paper"]
+text_list = ["R", "S", "P"]
