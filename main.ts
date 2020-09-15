@@ -7,11 +7,11 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     Player_choice = text_list[Choice]
     if (Computer_choice == text_list[0] && Player_choice == text_list[1]) {
-        Win = "Computer Wins"
+        Win = "MB Wins"
     } else if (Computer_choice == text_list[1] && Player_choice == text_list[2]) {
-        Win = "Computer Wins"
+        Win = "MB Wins"
     } else if (Computer_choice == text_list[2] && Player_choice == text_list[0]) {
-        Win = "Computer Wins"
+        Win = "MB Wins"
     } else if (Computer_choice == text_list[0] && Player_choice == text_list[2]) {
         Win = "You Win!"
     } else if (Computer_choice == text_list[2] && Player_choice == text_list[1]) {
@@ -60,3 +60,5 @@ basic.showLeds(`
     . # . . .
     `)
 text_list = ["R", "S", "P"]
+basic.clearScreen()
+basic.showString("Shake!")
